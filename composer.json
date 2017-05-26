@@ -1,8 +1,26 @@
 {
-    "name": "CrudRepositoryGenerator",
-    "autoload": {
-        "psr-4": {
-            "Treggats\\CrudRepositoryGenerator\\": "src/"
-        }
+  "name": "CrudRepositoryGenerator",
+  "type": "command",
+  "description": "Repository generator",
+  "keywords": [
+    "repository",
+    "contract",
+    "design pattern"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tonko Mulder",
+      "email": "tonko@tonkomulder.nl",
+      "role": "Developer"
     }
+  ],
+  "require": {
+    "php": ">=7.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Treggats\\CrudRepositoryGenerator\\": "src/"
+    }
+  }
 }
