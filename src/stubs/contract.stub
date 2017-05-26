@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * Class DummyRepository
+ *
+ * PHP Version 7.1
+ *
+ * @category Sideprojects
+ * @package  App\Repositories\Eloquent
+ * @author   John Doe <j.doe@example.tld>
+ * @license  MIT https://mit-license.org/
+ * @link     https://github.com
+ */
+
+namespace App\Repositories\Contracts;
+
+use DummyModelNamespace\DummyModelClass;
+use Illuminate\Support\Collection;
+
+/**
+ * DummyRepository implements the DummyRepository interface
+ * and provides the implemention using Eloquent
+ *
+ * @category Sideprojects
+ * @package  App\Repositories\Eloquent
+ * @author   John Doe <j.doe@example.tld>
+ * @license  MIT https://mit-license.org/
+ * @link     https://github.com
+ */
+interface DummyClass
+{
+    /**
+     * Get all the users as a collection
+     *
+     * @return Collection
+     */
+    public function getAll();
+
+    /**
+     * Get the user by it's id
+     *
+     * @param int $id a DummyModelClasss id
+     *
+     * @return DummyModelClass
+     */
+    public function getById(int $id);
+
+    /**
+     * Add a user to the collection
+     *
+     * @param array $props new DummyModelClass properties
+     *
+     * @return DummyModelClass
+     */
+    public function add(array $props);
+
+    /**
+     * Update a DummyModelClass with specified properties
+     *
+     * @param int   $id    DummyModelClass id
+     * @param array $props DummyModelClass properties
+     *
+     * @return DummyModelClass
+     */
+    public function updateById(int $id, array $props);
+
+    /**
+     * Delete a user by id
+     *
+     * @param int $id
+     *
+     * @return bool
+     */
+    public function deleteById(int $id);
+}
