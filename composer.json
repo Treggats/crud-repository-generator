@@ -1,5 +1,5 @@
 {
-  "name": "CrudRepositoryGenerator",
+  "name": "Treggats/CrudRepositoryGenerator",
   "type": "command",
   "description": "Repository generator",
   "keywords": [
