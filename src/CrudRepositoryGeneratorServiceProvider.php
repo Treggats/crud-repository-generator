@@ -7,19 +7,19 @@ use Illuminate\Support\ServiceProvider;
 
 class CrudRepositoryGeneratorServiceProvider extends ServiceProvider
 {
-	/**
-	 * @var string $configPath
-	 */
-	protected $configPath;
+    /**
+     * @var string $configPath
+     */
+    protected $configPath;
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function __construct(Application $app)
-	{
-		parent::__construct($app);
-		$this->configPath = __DIR__ . '/../config/crud-repository-generator.php';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function __construct(Application $app)
+    {
+        parent::__construct($app);
+        $this->configPath = __DIR__ . '/../config/crud-repository-generator.php';
+    }
 
     /**
      * Bootstrap any application services.
@@ -28,8 +28,8 @@ class CrudRepositoryGeneratorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-	    $publishPath = $this->app->make('path.config') . DIRECTORY_SEPARATOR . 'crud-repository-generator.php';
-	    $this->publishes([$this->configPath => $publishPath], 'config');
+        $publishPath = $this->app->make('path.config') . DIRECTORY_SEPARATOR . 'crud-repository-generator.php';
+        $this->publishes([$this->configPath => $publishPath], 'config');
     }
 
     /**
@@ -39,13 +39,13 @@ class CrudRepositoryGeneratorServiceProvider extends ServiceProvider
      */
     public function register()
     {
-	    $this->mergeConfigFrom($this->configPath, 'crud-repository-generator');
+        $this->mergeConfigFrom($this->configPath, 'crud-repository-generator');
 
-    	if ($this->app->runningInConsole()) {
-    		$this->commands([
-    			Console\Commands\MakeRepository::class,
-			    Console\Commands\MakeRepositoryContract::class,
-		    ]);
-	    }
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                Console\Commands\MakeRepository::class,
+                Console\Commands\MakeRepositoryContract::class,
+            ]);
+        }
     }
 }

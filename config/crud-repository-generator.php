@@ -6,7 +6,7 @@ use Illuminate\Support\Str;
 $appNamespace = Container::getInstance()->getNamespace();
 
 return [
-	'model_namespace' => Str::finish($appNamespace, '\\') . 'Models',
-	'repository_namespace' => Str::finish($appNamespace, '\\') . 'Repositories\\Eloquent',
-	'contract_namespace' => Str::finish($appNamespace, '\\') . 'Repositories\\Contracts',
+    'model_namespace' => Str::finish($appNamespace, '\\') . 'Models',
+    'repository_namespace' => Str::finish($appNamespace, '\\') . 'Repositories\\Eloquent',
+    'contract_namespace' => Str::finish($appNamespace, '\\') . 'Repositories\\Contracts',
 ];
