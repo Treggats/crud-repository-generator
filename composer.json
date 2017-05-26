@@ -1,0 +1,8 @@
+{
+    "name": "CrudRepositoryGenerator",
+    "autoload": {
+        "psr-4": {
+            "Treggats\\CrudRepositoryGenerator\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,96 @@
+<?php
+
+/**
+ * Class DummyClass
+ *
+ * PHP Version 7.1
+ *
+ * @category Sideprojects
+ * @package  App\Repositories\Eloquent
+ * @author   John Doe <j.doe@example.tld>
+ * @license  MIT https://mit-license.org/
+ * @link     https://github.com
+ */
+
+namespace DummyNamespace;
+
+use DummyContractNamespace\DummyContractInterface;
+use DummyModelNamespace\DummyModelClass;
+use Illuminate\Support\Collection;
+
+/**
+ * DummyClass implements the DummyClass interface
+ * and provides the implemention using Eloquent
+ *
+ * @category Sideprojects
+ * @package  App\Repositories\Eloquent
+ * @author   John Doe <j.doe@example.tld>
+ * @license  MIT https://mit-license.org/
+ * @link     https://github.com
+ */
+class DummyClass implements DummyContractInterface
+{
+    /**
+     * Get all the users as a collection
+     *
+     * @return Collection
+     */
+    public function getAll() : Collection
+    {
+        return DummyModelClass::all();
+    }
+
+    /**
+     * Get the user by it's id
+     *
+     * @param int $id a DummyModelClass's id
+     *
+     * @return DummyModelClass
+     */
+    public function getById(int $id) : DummyModelClass
+    {
+        return DummyModelClass::find($id);
+    }
+
+    /**
+     * Add a user to the collection
+     *
+     * @param array $props new DummyModelClass properties
+     *
+     * @return DummyModelClass
+     */
+    public function add(array $props) : DummyModelClass
+    {
+        return factory(DummyModelClass::class)->create($props);
+    }
+
+    /**
+     * Update a DummyModelClass with specified properties
+     *
+     * @param int   $id    DummyModelClass id
+     * @param array $props DummyModelClass properties
+     *
+     * @return DummyModelClass
+     */
+    public function updateById(int $id, array $props) : DummyModelClass
+    {
+        DummyModelVariable = $this->getById($id);
+        if (DummyModelVariable->update($props)) {
+            return DummyModelVariable;
+        }
+
+        return null;
+    }
+
+    /**
+     * Delete a user by id
+     *
+     * @param int $id
+     *
+     * @return bool
+     */
+    public function deleteById(int $id) : bool
+    {
+        return $this->getById($id)->delete();
+    }
+}
