@@ -25,5 +25,12 @@
     "psr-4": {
       "Treggats\\CrudRepositoryGenerator\\": "src/"
     }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Treggats\\CrudRepositoryGenerator\\CrudRepositoryGeneratorServiceProvider"
+      ]
+    }
   }
 }
