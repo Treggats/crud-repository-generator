@@ -17,13 +17,20 @@
   ],
   "require": {
     "php": ">=7.1",
-    "laravel/framework": "5.4.*",
+    "laravel/framework": "^5.4.0",
     "laravel/tinker": "~1.0"
 
   },
   "autoload": {
     "psr-4": {
       "Treggats\\CrudRepositoryGenerator\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Treggats\\CrudRepositoryGenerator\\CrudRepositoryGeneratorServiceProvider"
+      ]
     }
   }
 }
