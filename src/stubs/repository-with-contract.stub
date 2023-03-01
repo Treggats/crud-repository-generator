@@ -3,7 +3,7 @@
 /**
  * Class DummyClass
  *
- * PHP Version 7.1
+ * PHP Version 7.4
  *
  * @category Sideprojects
  * @package  App\Repositories\Eloquent
