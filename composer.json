@@ -18,7 +18,7 @@
   "require": {
     "php": ">=7.1",
     "laravel/framework": "^6.18.35|^7.30|^8",
-    "laravel/tinker": "~1.0"
+    "laravel/tinker": "~2.4"
 
   },
   "autoload": {
